@@ -1,12 +1,14 @@
 import React from 'react';
 import Text from '../components/Text';
 
-const RenderingEditor = ({ isOpen }) => {
-    console.log(isOpen)
+const RenderingEditor = ({ isOpen, text, formatText, textColor, textFont }) => {
     return (
         <div className="renderingEditor">
-            {isOpen && <Text />}
-
+            {isOpen && <Text
+                text={text}
+                formatText={formatText}
+                textColor={textColor}
+                textFont={textFont} />}
         </div>
     );
 };

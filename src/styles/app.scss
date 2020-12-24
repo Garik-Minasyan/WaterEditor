@@ -14,12 +14,9 @@ body {
 }
 
 .app {
-    position: relative;
-    width: 1007px;
-    height: 592px;
-    border-radius: 10px;
-    top: 89px;
-    left: 105px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     background-color: $primaryColorWhite;
 };
 

@@ -1,24 +1,30 @@
 import React from 'react';
 
-const SettingsText = () => {
+
+const SettingsText = ({ writeText, changeTextSize, changeTextColor, changeTextFont }) => {
     return (
-        <div>
+        <div className="settingsText">
             <div className="textInput">
-                <input type="text" placeholder="Write Text" />
+                <input type="text"
+                    placeholder="Write Text"
+                    onChange={writeText}
+                />
             </div>
             <div className="sizeRangeColor">
                 <p>Size</p>
-                <input type="range" />
-                <div className="colorMania"></div>
+                <input type="range"
+                    onChange={changeTextSize}
+                    min="10"
+                    max="90"
+                />
+                <input type="color" className="colorMania" onChange={changeTextColor} />
             </div>
+
             <div className="selectOptionBox">
                 <p>Font</p>
-                <select>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                <select onChange={changeTextFont}>
+                    <option>fantasy</option>
+                    <option>sans-serif</option>
                 </select>
             </div>
 
