@@ -1,0 +1,97 @@
+$primaryColorLightBlue:#F4F8FF;
+$primaryColorBlue: #387DFF;
+$primaryColorGrey: #7683A8;
+.textInput {
+    position: relative;
+    top: 30px;
+    left: 65px;
+    input {
+        width: 252px;
+        height: 40px;
+        background-color:$primaryColorLightBlue;
+        border: 2px solid $primaryColorBlue;
+        border-radius: 10px;
+    };
+};
+
+.sizeRangeColor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 55px;
+    left: 65px;
+    p {
+        font-size: 12px;
+        color:$primaryColorGrey ;
+    };
+    .colorMania {
+        width: 34px;
+        height: 34px;
+        border-radius: 5px;
+        background-color: $primaryColorGrey;
+        border: 0.5px solid $primaryColorLightBlue;
+    };
+};
+
+.selectOptionBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 65px;
+    left: 65px;
+    select {
+        width: 205px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    p {
+        font-size: 12px;
+        color:$primaryColorGrey ;
+    };
+};
+
+.tiledMode {
+    position: relative;
+    top: 90px;
+    left: 65px;
+    p{
+        font-size: 12px;
+        color:$primaryColorGrey ;
+        margin-left: 100px;
+        margin-bottom: 10px;
+    }
+    .singleOrTiled {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+.position {
+    position: relative;
+    top: 110px;
+    left: 65px;
+    p{
+        font-size: 12px;
+        color:$primaryColorGrey ;
+        margin-left: 105px;
+        margin-bottom: 10px;
+    }
+    .arrows {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .smallSquare {
+            width: 47px;
+            height: 47px;
+            border: 1px solid $primaryColorGrey;
+            background-color: $primaryColorLightBlue;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+
