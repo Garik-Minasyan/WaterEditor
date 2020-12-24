@@ -1,9 +1,9 @@
-$primaryColorLightBlue:#F4F8FF;
+@import './globalPrimarys.scss';
 
 .header {
     width: 100%;
     height: 62px;
-    border-radius: 9px 9px 0px 0px;
+    border-radius: $primaryBorderRadius;
     background-color: $primaryColorLightBlue;
     display: flex;
     justify-content: center;

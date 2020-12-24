@@ -1,15 +1,13 @@
-$primaryColorLightBlue:#F4F8FF;
-$primaryColorBlue: #387DFF;
-$primaryColorGrey: #7683A8;
+@import './globalPrimarys.scss';
 
 .settingsText {
     margin: 30px auto;
     .textInput {
         input {
             padding: 15px 45px;
-            background-color:$primaryColorLightBlue;
+            background-color: $primaryColorLightBlue;
             border: 2px solid $primaryColorBlue;
-            border-radius: 10px;
+            border-radius: $primaryBorderRadius;
             outline: none;  
         };
     };
@@ -21,7 +19,7 @@ $primaryColorGrey: #7683A8;
         margin: 20px 0;
         p {
             font-size: 12px;
-            color:$primaryColorGrey ;
+            color: $primaryColorGrey;
         };
         .colorMania {
             height: 34px;
@@ -39,7 +37,7 @@ $primaryColorGrey: #7683A8;
         select {
             width: 205px;
             height: 40px;
-            border-radius: 10px;
+            border-radius: $primaryBorderRadius;
             outline: none;
             background-color: $primaryColorLightBlue;
         }
@@ -80,7 +78,7 @@ $primaryColorGrey: #7683A8;
                 height: 47px;
                 border: 1px solid $primaryColorGrey;
                 background-color: $primaryColorLightBlue;
-                border-radius: 10px;
+                border-radius: $primaryBorderRadius;
             }
         }
     }
