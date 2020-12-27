@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import useDraggable from "./useDraggable";
 import { SETTINGS_TEXT, SETTINGS_LOGO } from '../App';
 import Logo from './Logo';
 import Text from './Text';
 
-const RenderingPanel = ({ type, text, formatText, textColor, textFont, logoOpacity }) => {
+const RenderingPanel = ({
+    type,
+    text,
+    formatText,
+    textColor,
+    textFont,
+    logoOpacity,
+    children }) => {
+    const cardRef = useRef(null);
+    useDraggable(cardRef);
+
     let renderingType;
 
     switch (type) {
@@ -24,7 +35,12 @@ const RenderingPanel = ({ type, text, formatText, textColor, textFont, logoOpaci
     }
     return (
         <div className="renderingPanel">
-            {renderingType}
+            <div className="textOrLogo" ref={cardRef}>
+                {children}
+                {renderingType}
+                <div className="resizer"></div>
+            </div>
+
         </div>
     )
 };

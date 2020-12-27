@@ -22,7 +22,7 @@ const SettingsLogo = ({ changeLogoOpacity }) => {
                 <input
                     type="range"
                     onChange={changeLogoOpacity}
-                    min="-0.10"
+                    min="-2"
                     max="10" />
             </div>
 

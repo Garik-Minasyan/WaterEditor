@@ -9,16 +9,18 @@
     position: relative;
 };
 
-.text {
+.textOrLogo {
     position: absolute;
     user-select: none;
     left: 100px;
     top: 60px;
-};
+    .resizer {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: $primaryColorLightBlue;
+        z-index: 2;
 
-.logo {
-    position: absolute;
-    user-select: none;
-    left: 100px;
-    top: 60px;
+    }
 };

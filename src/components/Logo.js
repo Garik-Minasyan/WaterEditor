@@ -3,9 +3,7 @@ import image from '../assets/images/BeeTV_vector-file.svg';
 
 const Logo = ({ logoOpacity }) => {
     return (
-        <div className="logo">
-            <img style={{ opacity: logoOpacity }} alt="png" src={image} />
-        </div>
+        <img style={{ zIndex: logoOpacity }} alt="png" src={image} />
     )
 }
 
