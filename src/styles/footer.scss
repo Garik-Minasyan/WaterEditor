@@ -1,12 +1,11 @@
 @import './globalPrimarys.scss';
 .footer {
-    width: 100%;
-    height: 113px;
+   padding: 5%;
     margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0px 0px 9px 9px;
+    border-radius: 0 0 10px 10px;
     background-color: $primaryColorLightBlue;
     button {
         line-height:  40px;

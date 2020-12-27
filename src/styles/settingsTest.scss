@@ -1,7 +1,8 @@
 @import './globalPrimarys.scss';
 
+
 .settingsText {
-    margin: 30px auto;
+    margin: 30px auto;  
     .textInput {
         input {
             padding: 15px 45px;
@@ -12,11 +13,11 @@
         };
     };
     
-    .sizeRangeColor {
+    .sizeColor {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin: 20px 0;
+        margin: 20px -12px;
         p {
             font-size: 12px;
             color: $primaryColorGrey;
@@ -27,6 +28,7 @@
             background-color: $primaryColorGrey;
             border: none;
             max-width: 34px;
+            cursor: pointer;
         };
     };
     
@@ -35,8 +37,7 @@
         justify-content: space-around;
         align-items: center;
         select {
-            width: 205px;
-            height: 40px;
+            padding: 10px 60px;
             border-radius: $primaryBorderRadius;
             outline: none;
             background-color: $primaryColorLightBlue;
@@ -46,44 +47,7 @@
             color:$primaryColorGrey ;
         };
     };
-    
-    .tiledMode {
-        margin: 20px;
-        p{
-            font-size: 12px;
-            color:$primaryColorGrey ;
-            margin-left: 85px;
-            margin-bottom: 10px;
-        }
-        .singleOrTiled {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-    }
-    
-    .position {
-        p{
-            font-size: 12px;
-            color:$primaryColorGrey ;
-            margin-left: 105px;
-            margin-bottom: 10px;
-        }
-        .arrows {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            .smallSquare {
-                width: 47px;
-                height: 47px;
-                border: 1px solid $primaryColorGrey;
-                background-color: $primaryColorLightBlue;
-                border-radius: $primaryBorderRadius;
-            }
-        }
-    }
-    
-}
+};
 
 
 

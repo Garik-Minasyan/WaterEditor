@@ -2,7 +2,13 @@
 @import './header.scss';
 @import './content.scss';
 @import './footer.scss';
-@import './renderingEditor.scss';
+@import './renderingPanel.scss';
+@import './setPadding.scss';
+@import './setPosition.scss';
+@import './settingsLogo.scss';
+@import './tiledMode.scss';
+@import './settingsTest.scss';
+@import './settingsPanel.scss';
 
 * {
     margin: 0;
@@ -10,14 +16,12 @@
     font-family:'Montserrat', sans-serif;
 };
 
-body {
-    background-color: rgba(145, 224, 240, 0.671);
-};
-
 .app {
     max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
     background-color: $primaryColorWhite;
+    border: 1px solid $primaryColorLightBlue;
+    border-radius: $primaryBorderRadius;
+    box-shadow: 0px 6px 12px #0052E01A;
 };
 

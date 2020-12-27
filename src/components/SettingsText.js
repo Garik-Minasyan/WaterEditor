@@ -1,59 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
+import SetPositin from './SetPosition';
+import SetPadding from './SetPadding';
+import TiledMode from './TiledMode';
 
 
-const SettingsText = ({ writeText, changeTextSize, changeTextColor, changeTextFont }) => {
+const SettingsText = ({
+    writeText,
+    changeTextSize,
+    changeTextColor,
+    changeTextFont,
+    changePosition }) => {
+
+    const [single, setSingle] = useState(true);
+
+    const singled = () => {
+        setSingle(prevSingle => !prevSingle)
+    };
+
     return (
         <div className="settingsText">
             <div className="textInput">
-                <input type="text"
+                <input
+                    type="text"
                     placeholder="Write Text"
                     onChange={writeText}
                 />
             </div>
-            <div className="sizeRangeColor">
+            <div className="sizeColor">
                 <p>Size</p>
-                <input type="range"
+                <input
+                    type="range"
                     onChange={changeTextSize}
                     min="10"
                     max="90"
                 />
-                <input type="color" className="colorMania" onChange={changeTextColor} />
+                <input
+                    type="color"
+                    className="colorMania"
+                    onChange={changeTextColor}
+                />
             </div>
 
             <div className="selectOptionBox">
                 <p>Font</p>
                 <select onChange={changeTextFont}>
+                    <option>Montserrat</option>
                     <option>fantasy</option>
                     <option>sans-serif</option>
                 </select>
             </div>
-
-            <div className="tiledMode">
-                <p>Tiled mode</p>
-                <div className="singleOrTiled">
-                    <h5>Single</h5>
-                    <div></div>
-                    <h5>Tiled</h5>
-                </div>
-            </div>
-            <div className="position">
-                <p>Position</p>
-                <div className="arrows">
-                    <div className="smallSquare">
-                        <div></div>
-                    </div>
-                    <div className="smallSquare">
-                        <div></div>
-                    </div>
-                    <div className="smallSquare">
-                        <div></div>
-                    </div>
-                    <div className="smallSquare">
-                        <div></div>
-                    </div>
-
-                </div>
-            </div>
+            <TiledMode singled={singled} />
+            {single ? <SetPositin changePosition={changePosition} /> : <SetPadding />}
         </div>
     );
 };

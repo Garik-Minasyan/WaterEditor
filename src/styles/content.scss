@@ -1,50 +1,9 @@
-@import './settingsTest.scss';
 @import './globalPrimarys.scss';
 
 .content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.settingsEditor {
-    margin: 100px auto;
-    .or {
-        width: 70px;
-        height: 40px;
-        margin: 30px;
-    }
-    .logo {
-        width: 220px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color:$primaryColorBlue;
-        color: $primaryColorLightBlue;
-        border-radius: 25px;
-        cursor: pointer;
-
-    }
-    .typeText {
-        width: 104px;
-        height: 34px;
-        border-radius: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color:$primaryColorLightBlue;
-        color: $primaryColorBlue;
-        cursor: pointer;
-    }
-}
+};
 
 
-.renderingEditor {
-    width: 650px;
-    height: 366px;
-    background-image: url(../assets/images/backgraundImg.png);
-    background-position: center;
-    background-size: contain;
-    position: relative;
-}

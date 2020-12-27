@@ -1,0 +1,48 @@
+@import './globalPrimarys.scss';
+
+.position {
+    padding: 10px;
+    p{
+        font-size: 12px;
+        color:$primaryColorGrey ;
+        margin-left: 105px;
+        margin-bottom: 10px;
+    }
+    .arrows {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .smallSquare {
+            width: 47px;
+            height: 47px;
+            margin-left: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $primaryColorGrey;
+            background-image:  linear-gradient(#FEFEFF, #EFF3FF);
+            border-radius: $primaryBorderRadius;
+            cursor: pointer;
+            
+            .arrow {
+                width: 22px;
+                height: 22px;
+                border-left: 5px solid #BDCFFB;
+                border-top: 5px solid #BDCFFB;
+            }
+            
+        }
+        .smallSquare:hover {
+            box-shadow: 0px 3px 6px #497EF733;
+        }
+        .rotayte90deg {
+             transform: rotate(90deg);
+        } 
+        .rotayte270deg {
+            transform: rotate(270deg);
+        }
+        .rotayte180deg {
+            transform: rotate(180deg);
+        }
+    }
+}

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import useDraggable from "./useDraggable";
 
-const Text = ({ text, formatText, textColor, textFont }) => {
+const Text = ({ text, formatText, textColor, textFont, children }) => {
+    const cardRef = useRef(null);
+    useDraggable(cardRef);
     return (
-        <div className="text">
+        <div className="text" ref={cardRef}>
+            {children}
             <p style={{
                 fontSize: formatText,
                 color: textColor,
@@ -13,3 +17,4 @@ const Text = ({ text, formatText, textColor, textFont }) => {
 };
 
 export default Text;
+

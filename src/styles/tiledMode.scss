@@ -1,0 +1,15 @@
+@import './globalPrimarys.scss';
+.tiledMode {
+    margin: 20px;
+    p{
+        font-size: 12px;
+        color:$primaryColorGrey ;
+        margin-left: 85px;
+        margin-bottom: 10px;
+    }
+    .singleOrTiled {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+};
