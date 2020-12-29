@@ -1,5 +1,5 @@
 import React from 'react';
-import { SETTINGS_LOGO, SETTINGS_TEXT } from '../App';
+import { SETTINGS_LOGO, SETTINGS_TEXT } from '../constants';
 
 const SettingsPanel = ({ setType }) => {
     return (

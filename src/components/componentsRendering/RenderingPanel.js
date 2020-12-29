@@ -1,19 +1,31 @@
-import React, { useRef } from 'react';
-import useDraggable from "./useDraggable";
-import { SETTINGS_TEXT, SETTINGS_LOGO } from '../App';
+import React, { useRef, useEffect } from 'react';
+import useDraggable from "../useDraggable";
+import { SETTINGS_TEXT, SETTINGS_LOGO } from '../constants';
 import Logo from './Logo';
 import Text from './Text';
 
 const RenderingPanel = ({
+    position,
     type,
     text,
     formatText,
     textColor,
     textFont,
     logoOpacity,
-    children }) => {
+    setContainerSize }) => {
+
     const cardRef = useRef(null);
-    useDraggable(cardRef);
+    const panelRef = useRef(null);
+
+
+    useEffect(() => {
+        if (panelRef.current) {
+            const rect = panelRef.current.getBoundingClientRect()
+            const sizes = { width: rect.width, height: rect.height }
+            setContainerSize(sizes)
+        }
+    }, [panelRef])
+    useDraggable(cardRef, panelRef.current);
 
     let renderingType;
 
@@ -34,13 +46,10 @@ const RenderingPanel = ({
             break;
     }
     return (
-        <div className="renderingPanel">
-            <div className="textOrLogo" ref={cardRef}>
-                {children}
+        <div className="renderingPanel" ref={panelRef}>
+            <div style={{ top: position.top, left: position.left }} className="textOrLogo" ref={cardRef}>
                 {renderingType}
-                <div className="resizer"></div>
             </div>
-
         </div>
     )
 };

@@ -1,11 +1,14 @@
 @import './globalPrimarys.scss';
 
+
 .renderingPanel {
     width: 650px;
     height: 366px;
-    background-image: url(../assets/images/backgraundImg.png);
+    margin: 15px;
+    border-radius: $primaryBorderRadius;
+    background-image: url(../assets/images/bgimg.png);
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     position: relative;
 };
 
@@ -14,13 +17,11 @@
     user-select: none;
     left: 100px;
     top: 60px;
-    .resizer {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        border-radius: 5px;
-        background-color: $primaryColorLightBlue;
-        z-index: 2;
-
+    img {
+        pointer-events: none;
+        user-select: none;
+    }
+    p{
+        margin-bottom: 0;
     }
 };

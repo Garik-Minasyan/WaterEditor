@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
-export default function useDraggable(el) {
+export default function useDraggable(el, panelRef) {
+    console.log(panelRef)
     const [{ dx, dy }, setOffset] = useState({ dx: 0, dy: 0 });
 
     useEffect(() => {
@@ -15,6 +16,7 @@ export default function useDraggable(el) {
             };
 
             document.addEventListener("mousemove", handleMouseMove);
+            console.log(panelRef)
 
             document.addEventListener(
                 "mouseup",

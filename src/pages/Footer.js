@@ -1,10 +1,10 @@
 import React from 'react';
-import { SETTINGS_PANEL } from '../App';
+import { SETTINGS_PANEL } from './../components/constants';
 
 const Footer = ({ type, setType }) => {
     return (
         <div className="footer">
-            {type !== SETTINGS_PANEL && <button onClick={() => setType(SETTINGS_PANEL)}>Cancel</button>}
+            {type && <button onClick={() => setType(SETTINGS_PANEL)}>Cancel</button>}
             <button>Done</button>
         </div>
     );
