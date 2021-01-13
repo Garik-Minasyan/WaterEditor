@@ -10,6 +10,7 @@
         border-radius: 50px;
     };
     .opasityInput {
+        border-top: 1px solid $primaryColorLightBlue;
         width: 240px;
         margin-top: 15px;
         margin-left: 15px;
@@ -24,3 +25,15 @@
           
     }
 };
+
+.settingsLogo::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color:  $primaryColorLightBlue;
+    width: 1px;
+    height: 425px;
+    top: 85px;
+    left: 555px;
+
+}

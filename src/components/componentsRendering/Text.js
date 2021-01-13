@@ -1,15 +1,18 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-
-const Text = ({ text, formatText, textColor, textFont }) => {
+const Text = () => {
+    const value = useSelector(state => state.waterMarkerReducer.value);
+    const textSize = useSelector(state => parseInt(state.waterMarkerReducer.textSize));
+    const color = useSelector(state => state.waterMarkerReducer.color);
+    const fontPath = useSelector(state => state.waterMarkerReducer.fontPath)
     return (
         <p style={{
-            fontSize: formatText,
-            color: textColor,
-            fontFamily: textFont
-        }}>{text}</p>
+            fontSize: textSize,
+            color: color,
+            fontFamily: fontPath,
+        }}>{value}</p>
     );
 };
 
 export default Text;
-

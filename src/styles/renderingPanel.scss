@@ -15,13 +15,29 @@
 .textOrLogo {
     position: absolute;
     user-select: none;
-    left: 100px;
-    top: 60px;
+    left: 0;
+    top: 0;
+    border: 2px solid transparent;
     img {
         pointer-events: none;
         user-select: none;
     }
     p{
+        width: 100%;
+        height: 100%;
         margin-bottom: 0;
     }
 };
+.textOrLogo:hover:after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    display: block;
+    position: absolute;
+    left: 45px;
+}
+
+.textOrLogo:hover {
+    border: 2px solid $primaryColorLightBlue;
+}

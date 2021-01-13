@@ -1,6 +1,7 @@
 @import './globalPrimarys.scss';
 
 .settingsPanel {
+
     margin: 100px auto;
     h4 {
         margin-top: 0px;
@@ -51,4 +52,16 @@
         background-color: $primaryColorBlue;
         color: $primaryColorLightBlue;
     }
+}
+
+.settingsPanel::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color:  $primaryColorLightBlue;
+    width: 1px;
+    height: 425px;
+    top: 85px;
+    left: 555px;
+
 }

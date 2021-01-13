@@ -1,9 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import image from '../../assets/images/BeeTV_vector-file.svg';
 
-const Logo = ({ logoOpacity }) => {
+const Logo = () => {
+    const opacity = useSelector(state => state.waterMarkerReducer.opacity)
     return (
-        <img style={{ opacity: logoOpacity }} alt="png" src={image} />
+        <img style={{ opacity: opacity }} alt="png" src={image} />
     )
 }
 

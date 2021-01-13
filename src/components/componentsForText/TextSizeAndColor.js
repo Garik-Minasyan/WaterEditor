@@ -1,21 +1,22 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { changeTextColor, changeTextSize } from '../../redux/actions';
 
-const TextSizeAndColor = ({ textColor, textSize, changeTextColor, changeTextSize }) => {
+const TextSizeAndColor = () => {
+    const dispatch = useDispatch();
     return (
         <div className="sizeColor">
             <p>Size</p>
             <input
-                vaalue={textSize}
                 type="range"
-                onChange={changeTextSize}
+                onChange={(e) => dispatch(changeTextSize(e.target.value))}
                 min={10}
                 max={90}
             />
             <input
-                value={textColor}
                 type="color"
                 className="colorMania"
-                onChange={changeTextColor}
+                onChange={(e) => dispatch(changeTextColor(e.target.value))}
             />
         </div>
     );

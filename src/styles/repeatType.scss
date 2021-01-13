@@ -1,0 +1,21 @@
+.repeatType {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 650px;
+    height: 366px;
+    margin: 15px;
+    border-radius: $primaryBorderRadius;
+    background-image: url(../assets/images/bgimg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.count {    
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
