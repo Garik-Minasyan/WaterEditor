@@ -4,18 +4,23 @@ import SetPositin from '../componentsTextOrLogo/SetPosition';
 import SetPadding from '../componentsTextOrLogo/SetPadding';
 import TiledMode from '../componentsTextOrLogo/TiledMode';
 import TextInput from '../componentsForText/TextInput';
-import TextSizeAndColor from '../componentsForText/TextSizeAndColor';
+import TextSize from '../componentsForText/TextSize';
+import TextColor from '../componentsForText/TextColor';
 import TextSelectBox from '../componentsForText/TextSelectBox';
 
 const SettingsText = () => {
-    const mode = useSelector(state => state.waterMarkerReducer.mode);
+    const { mode } = useSelector(state => state.data);
     return (
         <div className="settingsText">
             <TextInput />
-            <TextSizeAndColor />
+            <div className="sizeColor">
+                <TextSize />
+                <TextColor />
+            </div>
+
             <TextSelectBox />
             <TiledMode />
-            {mode ? <SetPadding /> : <SetPositin />}
+            {mode ? <SetPositin /> : <SetPadding />}
         </div>
     );
 };

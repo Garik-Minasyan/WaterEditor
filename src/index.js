@@ -3,13 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import "./styles/app.scss";
 import 'antd/dist/antd.css';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
-import waterMarkerReducer from './redux/reducers/waterMarkerReducer';
-import { combineReducers, createStore } from 'redux';
 
-import { Provider } from 'react-redux'
-const reducer = combineReducers({ waterMarkerReducer })
-const store = createStore(reducer)
 
 
 

@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+
 
 export default function useDraggable(el, panelRef, position) {
+    console.log(el, panelRef, position)
     const [{ dx, dy }, setOffset] = useState({ dx: 0, dy: 0 });
     useEffect(() => {
         const handleMouseDown = (event) => {

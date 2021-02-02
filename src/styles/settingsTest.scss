@@ -14,6 +14,12 @@
     };
     
     .sizeColor {
+        .textSize {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 200px;
+        }
         border-top: 1px solid $primaryColorLightBlue;
         display: flex;
         justify-content: space-around;
@@ -22,11 +28,12 @@
         p {
             font-size: 12px;
             color: $primaryColorGrey;
+            margin-top: 10px;
         };
         .colorMania {
             height: 34px;
             border-radius: 5px;
-            background-color: $primaryColorGrey;
+            background-color: white;
             border: none;
             max-width: 34px;
             cursor: pointer;

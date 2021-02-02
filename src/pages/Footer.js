@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useDispatch } from 'react-redux';
 import { changeType, saveData, SAVE_DATA } from '../redux/actions';
 import { SETTINGS_PANEL } from './../components/constants';
@@ -14,4 +14,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default memo(Footer);

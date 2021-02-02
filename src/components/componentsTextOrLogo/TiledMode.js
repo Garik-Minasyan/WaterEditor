@@ -1,11 +1,14 @@
 import React from 'react';
+import { memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+
 import { Switch } from 'antd';
 import { singled } from '../../redux/actions';
 
 const TiledMode = () => {
-    const mode = useSelector(state => state.waterMarkerReducer.mode);
+    const { mode } = useSelector(state => state.data);
     const dispatch = useDispatch();
+
     return (
         <div className="tiledMode">
             <p>Tiled mode</p>
@@ -18,4 +21,4 @@ const TiledMode = () => {
     );
 };
 
-export default TiledMode;
+export default memo(TiledMode);

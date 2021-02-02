@@ -7,13 +7,13 @@ import LogoImage from '../componentsForLogo/LogoImage';
 import LogoOpacity from '../componentsForLogo/LogoOpacity';
 
 const SettingsLogo = () => {
-    const mode = useSelector(state => state.waterMarkerReducer.mode);
+    const { mode } = useSelector(state => state.data);
     return (
         <div className="settingsLogo">
             <LogoImage />
             <LogoOpacity />
             <TiledMode />
-            {mode ? <SetPadding /> : <SetPositin />}
+            {mode ? <SetPositin /> : <SetPadding />}
         </div>
     );
 };

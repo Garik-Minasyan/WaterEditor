@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useCallback, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { writeText } from '../../redux/actions';
 
 const TextInput = () => {
-    const value = useSelector(state => state.waterMarkerReducer.value)
-    console.log(value)
+    const { value } = useSelector(state => state.data)
     const dispatch = useDispatch();
+
+    const onWriteText = useCallback((e) => {
+        dispatch(writeText(e.target.value))
+    }, [dispatch]);
+
     return (
         <div className="textInput">
             <input
@@ -13,10 +17,10 @@ const TextInput = () => {
                 type="text"
                 maxLength={10}
                 placeholder="Write Text"
-                onChange={(e) => dispatch(writeText(e.target.value))}
+                onChange={onWriteText}
             />
         </div>
     );
 };
 
-export default TextInput;
+export default memo(TextInput);

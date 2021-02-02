@@ -13,7 +13,7 @@ export const INITIAL_CROP_PARAMS = {
 
 };
 
-export const BTN_FOR_POSITIN = {
+export const BTN_FOR_POSITION = {
     topLeft: "topLeft",
     topRight: "topRight",
     bottomRight: "bottoRight",
@@ -34,7 +34,7 @@ export const DATA = {
     imageCropParams: {
         left: 10,
         top: 10,
-        width: 0,
-        height: 0
+        width: 50,
+        height: 72
     }
 }

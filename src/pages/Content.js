@@ -2,14 +2,14 @@ import React from 'react';
 import SettingsText from '../components/componentsSettings/SettingsText';
 import SettingsPanel from '../components/componentsSettings/SettingsPanel';
 import SettingsLogo from '../components/componentsSettings/SettingsLogo';
-import RenderingPanel from '../components/componentsRendering/RenderingPanel';
-import RepeatType from './../components/componentsRendering/RepeatType';
+import RenderingSingleMod from '../components/componentsRendering/RenderingSingleMod';
+import RenderingTiledMod from './../components/componentsRendering/RenderingTiledMod';
 import { SETTINGS_PANEL, SETTINGS_LOGO, SETTINGS_TEXT } from '../components/constants';
 import { useSelector } from 'react-redux';
 
 const Content = () => {
-    const panelType = useSelector(state => state.waterMarkerReducer.panelType)
-    const mode = useSelector(state => state.waterMarkerReducer.mode);
+    const panelType = useSelector(state => state.panelType)
+    const { mode } = useSelector(state => state.data);
 
     let leftContent;
 
@@ -31,7 +31,7 @@ const Content = () => {
     return (
         <div className="content">
             {leftContent}
-            {mode ? <RepeatType /> : <RenderingPanel />}
+            {mode ? <RenderingSingleMod /> : <RenderingTiledMod />}
         </div>
     );
 };
